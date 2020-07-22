@@ -234,8 +234,13 @@ exports.config = {
     /**
      * Runs after a Cucumber scenario
      */
-    // afterScenario: function (uri, feature, scenario, result, sourceLocation, context) {
-    // },
+    afterScenario: function (uri, feature, scenario, result, sourceLocation, context) {
+        if(result['status']=='failed')
+        {
+         console.log(browser.getUrl())   
+         browser.saveScreenshot(`./screenshots/${scenario['name']}.png`)
+         }
+    },
     /**
      * Runs after a Cucumber feature
      */
