@@ -14,5 +14,6 @@ When('I search for restaurants', function () {
 
 
 Then('I should see some restaurants in {string}', function (postcode) {
-    expect(SearchPage.searchLocation).toHaveTextContaining(postcode)
+  expect(SearchPage.searchLocation).toHaveTextContaining(postcode)
+  expect(SearchPage.restaurantsFound).toBeElementsArrayOfSize({ gte: 1 })
 })
