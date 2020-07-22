@@ -4,7 +4,7 @@
   "description": "test automation framework for justeat website using typescript,cucumberJS and webdriverIO",
   "main": "index.js",
   "scripts": {
-    "test": "wdio wdio.conf.js && node cucumber-html-report.js",
+    "test": "./node_modules/.bin/rimraf 'jsonReports/*.json' ; ./node_modules/.bin/wdio wdio.conf.js; node cucumber-html-report.js",
     "cucumber": "./node_modules/.bin/cucumber-js features/*.feature --require 'step-definitions/**/*.ts' --require-module ts-node --require-module cucumber-pretty"
   },
   "repository": {
@@ -28,9 +28,12 @@
     "cucumber": "^6.0.5",
     "cucumber-html-reporter": "^5.2.0",
     "cucumber-pretty": "^6.0.0",
+    "moment": "^2.27.0",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.7",
     "wdio-chromedriver-service": "^6.0.3",
     "wdio-cucumberjs-json-reporter": "^2.0.2"
+  },
+  "dependencies": {
   }
 }

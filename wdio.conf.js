@@ -1,3 +1,5 @@
+var moment = require('moment');
+
 exports.config = {
     //
     // ====================
@@ -115,21 +117,11 @@ exports.config = {
     // Make sure you have the wdio adapter package for the specific framework installed
     // before running any tests.
     framework: 'cucumber',
-    //
-    // The number of times to retry the entire specfile when it fails as a whole
-    // specFileRetries: 1,
-    //
-    // Whether or not retried specfiles should be retried immediately or deferred to the end of the queue
-    // specFileRetriesDeferred: false,
-    //
-    // Test reporter for stdout.
-    // The only one supported by default is 'dot'
-    // see also: https://webdriver.io/docs/dot-reporter.html
-    reporters: [ 
+    reporters: [ 'spec',
                     [ 'cucumberjs-json', {
-                                            jsonFolder: 'jsonReports/',
-                                            language: 'en',
-                                            },
+                        jsonFolder: 'jsonReports/',
+                        language: 'en',
+                    },
                     ],
                 ],
 
@@ -143,7 +135,7 @@ exports.config = {
         backtrace: false,
         // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
         requireModule: [
-            () => { require('ts-node').register({ files: true }) },'cucumber-pretty'
+            () => { require('ts-node').register({ files: true }) } 
         ],
         // <boolean> invoke formatters without executing steps
         dryRun: false,
@@ -243,8 +235,8 @@ exports.config = {
     afterScenario: function (uri, feature, scenario, result, sourceLocation, context) {
         if(result['status']=='failed')
         {
-         console.log(browser.getUrl())   
-         browser.saveScreenshot(`./screenshots/${scenario['name']}.png`)
+         console.log(browser.getUrl()) 
+         browser.saveScreenshot(`./screenshots/${scenario['name']}-${moment().format('MMMM-Do-YYYY-h:mm:ss')}.png`)
          }
     },
     /**
