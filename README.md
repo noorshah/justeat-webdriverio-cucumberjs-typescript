@@ -46,7 +46,8 @@ The project is based on nodeJS and has been developed against the
 
     node version 12.18.2
     
-In order for you to run the tests on your local machine it recommended that you first install all the relevant node packages with the following command
+In order for you to run the tests on your local machine it recommended that you first install all 
+the relevant node packages with the following command
   
     npm install
     
@@ -54,18 +55,36 @@ Then in order to run the tests you can run this command
 
     npm run test
     
- The above command is a combination of three commands. It first deletes any .json files that are generated previously by a report run. This is because the .json cucumber files are not timestamped. It then runs the webdriverIO tests against the **wdio.conf.js** file and lastly run the commands to generated the html files
+ The above command is a combination of three commands. It first deletes any .json files that are 
+ generated previously by a report run. This is because the .json cucumber files are not timestamped. 
+ It then runs the webdriverIO tests against the **wdio.conf.js** file and lastly run the commands to generated the html files
  
  
  If you want to add new feature files or scenarios to existing features files there is also a command called 
  
     npm run cucumber
     
- This will generate new step definitions but it has an issue at the moment that it throws an error against the step definition that has imports so it is suggested to comment the existing step definitions while running this command
+ This will generate new step definitions but it has an issue at the moment that it throws an error against 
+ the step definition that has imports so it is suggested to comment the existing step definitions 
+ while running this command
 
 ### HTML cucumber reports
 
-The html reports generated at the end of each run has both screenshots as well as the url that the browser had at the point of failure for easy debugging
+The html reports generated at the end of each run has both screenshots as well as the url that the browser 
+had at the point of failure for easy debugging
+
+### Flaky Scenarios 
+
+The two scenarios that have been added attempt to test the core of the customer workflow
+
+1. The first Scenario that has been added tests the cuisine filter functionality of the website and upon
+filtering it then compares if the resulting restaurants have the same cuisine
+
+2. The second scenario checked the change location functionality of the website and checks
+if you land back on home page 
+
+In order to cater to the flakiness of both these scenarios explicit waits have been added with certain 
+time limits as well as logging on why the condition wasnt met when time out period is over
 
  
     
