@@ -11,9 +11,10 @@ class HomePage extends Page {
 
     searchLocalRestaurants(postcode: string){
         this.open()
-        this.postCodeSearchBox.clearValue()
+        browser.refresh()
         this.postCodeSearchBox.setValue(postcode)
         this.submitSearch.click()
+       
     }
 
     

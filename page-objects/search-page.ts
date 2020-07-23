@@ -16,29 +16,24 @@ class SearchResultPage extends Page {
         var filters= this.cuisineFilters 
         var noOfFilters=this.cuisineFilters.length
         if(noOfFilters>10){noOfFilters=5}
-        const rand=Math.floor(Math.random() * noOfFilters)+1
-        filters[rand].scrollIntoView()
-        var randomfilterCuisine=filters[rand].$('input').getAttribute('data-filter-id')
+        const rand=Math.floor(Math.random() * noOfFilters)
+        var randomfilterCuisine=filters[rand].$('label a').getText().toLowerCase()
         filters[rand].waitForDisplayed({timeout: 60000,
-         timeoutMsg: `filter ${randomfilterCuisine} with html ${filters[rand].getHTML()} is not clickable after  1 min`})
+         timeoutMsg: `filter ${randomfilterCuisine} with html ${filters[rand].getHTML()} is not clickable after  6s`})
         filters[rand].click()
 
         return randomfilterCuisine
      }
 
      restaurantCuisineComparison(){
-            var restCuisine=this.openRestaurantsCuisine
-            var cuisine=[]
-            for(var i=0;i<this.openRestaurantsCuisine.length;i++){
-                cuisine.push(restCuisine[i].getAttribute('data-cuisine-names'))
-            }
-
-             console.log(cuisine)
-             return cuisine
+         var restCuisine=this.openRestaurantsCuisine
+         var cuisine=restCuisine.map(food => food.getAttribute('data-cuisine-names').toLowerCase().split(','))
+         return cuisine[0]
+     
      }
 
      changeLocationForTakeAway(){
-        browser.waitUntil(()=>this.changeLocation.isClickable(),{timeout: 20000 ,timeoutMsg: 'location cant be changed after 2s'})
+        browser.waitUntil(()=>this.changeLocation.isClickable(),{timeout: 50000 ,timeoutMsg: 'location cant be changed after 3s'})
         this.changeLocation.click()
      }
 }
