@@ -30,8 +30,8 @@
     
     Also the machine learning and AI coming into the field of test automation and whether
     it will be to cater to the demands of cross browser automation because even though many products 
-    (Browserstack or Sauce Labs etc ) are available in the market  to support it. The test automation tools itself dont provide 
-    the support for the wide spectrum of browsers that are needed to test.
+    (Browserstack or Sauce Labs etc ) are available in the market  to support it. The test automation
+    tools itself dont provide the support for the wide spectrum of browsers that are needed to test.
     
     Lastly how test automation and development or test automation and devops is merging into one role. Especially
     when it comes to non functional testing like performance.
@@ -50,17 +50,17 @@
     circles.
     
     The other example is when I had to convert a legacy test automation framework written in Java to Ruby for 
-    payments systems of an web app. Now because I had come from C# , Ruby and Java background understanding the code wasnt tricky. 
-    However there was alo of   duplication in terms of business cases for which again I spent a considerable time with the developer
-    who had developed the previous version of the payment system and who were revampng it now too. So that I could understand the crux 
-    of the business cases well
+    payments systems of an web app. Now because I had come from C# , Ruby and Java background understanding the
+    code wasnt tricky.However there was alot of   duplication in terms of business cases for which again I spent 
+    a considerable time with the developer who had developed the previous version of the payment system and who were
+    revampng it now too. So that I could understand the crux of the business cases well.
     
     
 **How would you improve the customer experience of the Just Eat website?**
 
     I think that the open retaurants page which you land on upon search a postcode could do with some improvisation. 
     Primarily from a data perspective. Some restaurants are filtered even though they dont have no cuisine info.
-    I understand that the front end web app maybe data agnostic and may be dependent on the api thats its consuming possibly third party. 
-    Still its a conversation that the stakeholders and devs need to have to give better info. Same goes for rating of restaurants. 
-    Some restaurants ahve no rating at all this I find a bit misleading. Lastly when you search for a dish in the 
+    I understand that the front end web app maybe data agnostic and may be dependent on the api thats its consuming 
+    possibly third party. Still its a conversation that the stakeholders and devs need to have to give better info. 
+    Same goes for rating of restaurants. Some restaurants ahve no rating at all this I find a bit misleading. Lastly when you search for a dish in the 
     typeahead on open restaurants page. The results again dont always match.
