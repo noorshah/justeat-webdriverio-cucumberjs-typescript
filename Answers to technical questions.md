@@ -58,5 +58,9 @@
     
 **How would you improve the customer experience of the Just Eat website?**
 
-    I think that the open retaurants page which you land on upon search a postcode could do with some improvisation. Primarily from a data perspective. Some restaurants are filtered even though they dont have no cuisine info. I understand that the front end web app maybe data agnostic and may be dependent on the api thats its consuming possibly third party. Still its a conversation that the stakeholders and devs need to have to give better info. Same goes for rating of restaurants . Some restaurants ahve no rating at all this I find a bit misleading. Lastly when you search for a dish in the typeahead on open restaurants page. 
-    The results again dont always match.
+    I think that the open retaurants page which you land on upon search a postcode could do with some improvisation. 
+    Primarily from a data perspective. Some restaurants are filtered even though they dont have no cuisine info.
+    I understand that the front end web app maybe data agnostic and may be dependent on the api thats its consuming possibly third party. 
+    Still its a conversation that the stakeholders and devs need to have to give better info. Same goes for rating of restaurants. 
+    Some restaurants ahve no rating at all this I find a bit misleading. Lastly when you search for a dish in the 
+    typeahead on open restaurants page. The results again dont always match.
