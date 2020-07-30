@@ -20,7 +20,8 @@
   
     I think instead of the scenario that tests the change location. I would either add one for the search dish 
     in the typeahead or maybe even an end to end one that starts from searching against a postcode and going all
-    the way to the payment page verifing the things in the basket. But I noticed that just eat as a website had a lot of variables as far as info is concerned so automating the whole end to end journey may have been more time consuming 
+    the way to the payment page verifing the things in the basket. But I noticed that just eat as a website had a lot of
+    variables as far as info is concerned so automating the whole end to end journey may have been more time consuming 
   
 **What do you think is the most interesting trend in test automation?**
 
@@ -49,10 +50,13 @@
     circles.
     
     The other example is when I had to convert a legacy test automation framework written in Java to Ruby for 
-    payments systems of an web app. Now because I had come from C# , Ruby and Java background understanding the code wasnt tricky. However there was alo of   duplication in terms of business cases for which again I spent a considerable time with the developer who had developed the previous
-    version of the payment system and who were revampng it now too. So that I could understand the crux of the business cases well
+    payments systems of an web app. Now because I had come from C# , Ruby and Java background understanding the code wasnt tricky. 
+    However there was alo of   duplication in terms of business cases for which again I spent a considerable time with the developer
+    who had developed the previous version of the payment system and who were revampng it now too. So that I could understand the crux 
+    of the business cases well
     
     
 **How would you improve the customer experience of the Just Eat website?**
 
-    I think that the open retaurants page which you land on upon search a postcode could do with some improvisation. Primarily from a data perspective. Some restaurants are filtered even though they dont have no cuisine info. I understand that the front end web app maybe data agnostic and may be dependent on the api thats its consuming possibly third party. Still its a conversation that the stakeholders and devs need to have to give better info. Same goes for rating of restaurants . Some restaurants ahve no rating at all this I find a bit misleading. Lastly when you search for a dish in the typeahead on open restaurants page. The results again dont always match.
+    I think that the open retaurants page which you land on upon search a postcode could do with some improvisation. Primarily from a data perspective. Some restaurants are filtered even though they dont have no cuisine info. I understand that the front end web app maybe data agnostic and may be dependent on the api thats its consuming possibly third party. Still its a conversation that the stakeholders and devs need to have to give better info. Same goes for rating of restaurants . Some restaurants ahve no rating at all this I find a bit misleading. Lastly when you search for a dish in the typeahead on open restaurants page. 
+    The results again dont always match.
