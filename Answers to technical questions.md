@@ -49,7 +49,8 @@
     circles.
     
     The other example is when I had to convert a legacy test automation framework written in Java to Ruby for 
-    payments systems of an web app. Now because I had come from C# , Ruby and Java background understanding the code wasnt tricky. However there was alo of   duplication in terms of business cases for which again I spent a considerable time with the developer who had developed the previous version of the payment system and who were revampng it now too. So that I could understand the crux of the business cases well
+    payments systems of an web app. Now because I had come from C# , Ruby and Java background understanding the code wasnt tricky. However there was alo of   duplication in terms of business cases for which again I spent a considerable time with the developer who had developed the previous
+    version of the payment system and who were revampng it now too. So that I could understand the crux of the business cases well
     
     
 **How would you improve the customer experience of the Just Eat website?**
